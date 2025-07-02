@@ -8,27 +8,27 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: carrier_clip
-    second: {fileID: 2100000, guid: 6e5cad147450f7047ba28c0bf22f68b0, type: 2}
+    second: {fileID: 2100000, guid: f4304ddfaaf73c347b33ce9b3bd545ab, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: carrier_clip_Base_color
-    second: {fileID: 2800000, guid: 510784f46f455174498b8fb537c2003b, type: 3}
+      name: kindergarten_asset_02_250701_carrier_clip_BaseColor
+    second: {fileID: 2800000, guid: 9ec7cbfb68de2c3498fe49b95caaf4cd, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: carrier_clip_Metallic
-    second: {fileID: 2800000, guid: e41d866bf36c6724b8beababbd0008b7, type: 3}
+      name: kindergarten_asset_02_250701_carrier_clip_Metallic
+    second: {fileID: 2800000, guid: 3ce67326e4851ff45af22eab16f4bafe, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: carrier_clip_Normal
-    second: {fileID: 2800000, guid: 164cf50786d8b154cb6ac5eb750f05b1, type: 3}
+      name: kindergarten_asset_02_250701_carrier_clip_Normal
+    second: {fileID: 2800000, guid: 681a826ef75ffcb469642309f1fad52a, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: carrier_clip_Roughness
-    second: {fileID: 2800000, guid: 53041345aee37fc4c95000271ab6d8c4, type: 3}
+      name: kindergarten_asset_02_250701_carrier_clip_Roughness
+    second: {fileID: 2800000, guid: b9a6a64c46f03694f9fc54a029ba481d, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
