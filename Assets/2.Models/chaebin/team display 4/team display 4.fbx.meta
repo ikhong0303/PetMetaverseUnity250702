@@ -12,23 +12,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: team 2_2_BaseColor
-    second: {fileID: 2800000, guid: bea2899e1812ac042a8a86f94e854d5d, type: 3}
+      name: team 2_2_AlbedoTransparency
+    second: {fileID: 2800000, guid: 5ec7506a42adfbd4999f73389379eecf, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: team 2_2_Metallic
-    second: {fileID: 2800000, guid: a09720dc8fecdef42b8bab1e67426f43, type: 3}
+      name: team 2_2_MetallicSmoothness
+    second: {fileID: 2800000, guid: 3db0684682fd00641a3dd2f0483a38f4, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: team 2_2_Normal
-    second: {fileID: 2800000, guid: 6a3983ab41455cb47ade6e2630011a69, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: team 2_2_Roughness
-    second: {fileID: 2800000, guid: 07cbca982c2764345b7da9d67914924d, type: 3}
+    second: {fileID: 2800000, guid: d255966a880f0294bae5fb2fba5d0ea5, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

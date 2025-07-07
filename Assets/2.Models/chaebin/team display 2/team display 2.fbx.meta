@@ -3,7 +3,27 @@ guid: 9e0c2a9b648a6d847bc11e5011f6c50d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 2
+    second: {fileID: 2100000, guid: 13a8ec566623a2a4d9814cc2c95a69ba, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: team 2_2_AlbedoTransparency
+    second: {fileID: 2800000, guid: 061431886b854e441bcef4238158db3f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: team 2_2_MetallicSmoothness
+    second: {fileID: 2800000, guid: bf773bcb7ac6d154f8de484452f90f32, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: team 2_2_Normal
+    second: {fileID: 2800000, guid: 2106650f5471a6345b686a02d7e7a7c1, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
