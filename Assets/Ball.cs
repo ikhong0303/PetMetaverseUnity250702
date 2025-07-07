@@ -25,15 +25,16 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Pet"))
-        {
-            CatchBall();
-            mouseBall.SetActive(true);
-            gameObject.SetActive(false);
+        if(collision.transform.TryGetComponent<PetController>(out var pet) && canBite)
+        {         
+            pet.mouseBall.SetActive(true);
             foreach (var pc in petControllers)
             {
                 pc.state = PetState.wait;
             }
+            canBite = false;
+            gameObject.SetActive(false);
+
         }
     }
 

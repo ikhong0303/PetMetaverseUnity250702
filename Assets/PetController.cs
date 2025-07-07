@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.XR.Interaction.Toolkit.AffordanceSystem.Receiver;
 
 
 public enum PetState
@@ -12,22 +13,30 @@ public class PetController : MonoBehaviour
     public NavMeshAgent navMeshAgent;
     public GameObject player;
 
-    public GameObject[] ball;
+    public GameObject ball;
     public PetState state = PetState.wait;
+
+    public GameObject mouseBall;
     //public Animator petAnimator;
 
     //public float timer;
     // public Collider triggerObject;
 
-    public Transform basePosition;
+    public Vector3 basePosition;
     public float searchRadius, playerDistance;
 
+
+    private void Awake()
+    {
+        mouseBall.SetActive(false);
+    }
     // Start is called before the first frame update
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
-        ball = GameObject.FindGameObjectsWithTag("Ball");
+        ball = GameObject.FindGameObjectWithTag("Ball");
+        basePosition = this.transform.position;
     }
 
 
@@ -43,6 +52,16 @@ public class PetController : MonoBehaviour
         {
             state = PetState.wait;
         }
+
+        if(playerDistance < 2 && mouseBall.activeInHierarchy)
+        {
+            mouseBall.SetActive(false);
+
+            ball.SetActive(true);
+            ball.transform.position = player.transform.position + player.transform.forward;
+
+
+        }
         
     }
 
@@ -52,17 +71,17 @@ public class PetController : MonoBehaviour
         DistanceCheck();
         if (state == PetState.play) //플레이 모드일때 공을 쫒는건가
         {
-            navMeshAgent.SetDestination(ball[0].transform.position);
+            navMeshAgent.SetDestination(ball.transform.position);
         }
 
-        else if (state == PetState.chase) //추적일때 플레이어 추적
+        else if (state == PetState.chase || mouseBall.activeInHierarchy) //추적일때 플레이어 추적
         {
             navMeshAgent.SetDestination(player.transform.position);
         }
 
         else //대기모드에선 원래 위치로 복귀
         {
-            navMeshAgent.SetDestination(basePosition.position);
+            navMeshAgent.SetDestination(basePosition);
         }
 
 
@@ -77,6 +96,7 @@ public class PetController : MonoBehaviour
             //petAnimator.SetBool("Run", true);
             navMeshAgent.isStopped = false;
         }
+
 
     }
 
