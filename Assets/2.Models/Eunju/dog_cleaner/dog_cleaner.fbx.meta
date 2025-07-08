@@ -13,22 +13,22 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: small_Base_color
-    second: {fileID: 2800000, guid: 8b2569ce121acc84d831309224286a84, type: 3}
+    second: {fileID: 2800000, guid: 67c587a79b58dc344ac0379e1f2cae15, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: small_Metallic
-    second: {fileID: 2800000, guid: ec45b66dfbb290643bdabec15a485b43, type: 3}
+    second: {fileID: 2800000, guid: 0d716dbe7f61fff4e9bb20437eb24527, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: small_Normal
-    second: {fileID: 2800000, guid: 07b20f4ffc32c1a4b858365a0e2e9cab, type: 3}
+    second: {fileID: 2800000, guid: 81169ee7204fccf48b7c881ae9baa437, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: small_Roughness
-    second: {fileID: 2800000, guid: 40ab1869e2586244aad46a2e0dbfc9c0, type: 3}
+    second: {fileID: 2800000, guid: c51e2fbf35e4733408fc2659b49413f0, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
