@@ -9,36 +9,6 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Lamp_Other
     second: {fileID: 2100000, guid: 1f3f6456faad1ac449000be8c3c418d1, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Lamp_Other_Base_color
-    second: {fileID: 2800000, guid: 90b5769d401698f4fae4d730b0397088, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Lamp_Other_Emissive
-    second: {fileID: 2800000, guid: e47f16601d155604a8cb409bcff480fc, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Lamp_Other_Metallic
-    second: {fileID: 2800000, guid: ac9dec5e0356b254e88dfd0062df1713, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Lamp_Other_Normal_OpenGL
-    second: {fileID: 2800000, guid: 4655279a746b3de49a40f608103b9afd, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Lamp_Other_Opacity
-    second: {fileID: 2800000, guid: 3aa8aadcd98967c439438c268240b6ec, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Lamp_Other_Roughness
-    second: {fileID: 2800000, guid: b40352abdbd35af4990c9b28444d3ab8, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
