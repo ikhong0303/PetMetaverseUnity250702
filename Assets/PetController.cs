@@ -25,18 +25,24 @@ public class PetController : MonoBehaviour
     public Vector3 basePosition;
     public float searchRadius, playerDistance;
 
+    Animator anim;
+
 
     private void Awake()
     {
-        mouseBall.SetActive(false);
+        mouseBall = transform.GetComponentInChildren<BallFinder>().gameObject;
+        
+
     }
     // Start is called before the first frame update
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         ball = GameObject.FindGameObjectWithTag("Ball");
         basePosition = this.transform.position;
+        mouseBall.SetActive(false);
     }
 
 
@@ -63,12 +69,14 @@ public class PetController : MonoBehaviour
 
         }
         
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         DistanceCheck();
+        anim.SetBool("isWalk", navMeshAgent.velocity.magnitude > 0.5f);
         if (state == PetState.play) //플레이 모드일때 공을 쫒는건가
         {
             navMeshAgent.SetDestination(ball.transform.position);
