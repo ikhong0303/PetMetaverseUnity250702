@@ -1,19 +1,21 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public GameObject[] Pet;
-    public PetController[] petControllers;
+    public List<GameObject> Pet = new List<GameObject>();
+    public List<PetController> petControllers = new List<PetController>();
     public GameObject mouseBall;
     public bool canBite = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         canBite = false;
-        Pet = GameObject.FindGameObjectsWithTag("Pet");
-        for (int i = 0; i < Pet.Length-1; i++)
+        Pet.AddRange(GameObject.FindGameObjectsWithTag("Pet"));
+        for (int i = 0; i < Pet.Count; i++)
+
         {
-            petControllers[i] = Pet[i].GetComponent<PetController>();
+            petControllers.Add(Pet[i].GetComponent<PetController>());
         }
     }
 

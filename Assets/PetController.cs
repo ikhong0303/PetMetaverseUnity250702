@@ -59,14 +59,18 @@ public class PetController : MonoBehaviour
             state = PetState.wait;
         }
 
-        if(playerDistance < 2 && mouseBall.activeInHierarchy)
+        if(playerDistance < 2 && mouseBall.activeInHierarchy && !ball.activeInHierarchy)
         {
             mouseBall.SetActive(false);
 
             ball.SetActive(true);
-            ball.transform.position = player.transform.position + player.transform.forward;
+            ball.transform.position = Camera.main.transform.position + new Vector3(Random.Range(0.5f,2),1, Random.Range(0.5f,2));
+            Rigidbody rb = ball.GetComponent<Rigidbody>();
+      
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
 
-
+            print("ball"); 
         }
         
         
@@ -85,11 +89,16 @@ public class PetController : MonoBehaviour
         else if (state == PetState.chase || mouseBall.activeInHierarchy) //추적일때 플레이어 추적
         {
             navMeshAgent.SetDestination(player.transform.position);
+            if(playerDistance < 2)
+            {
+                navMeshAgent.ResetPath();
+            }
         }
 
         else //대기모드에선 원래 위치로 복귀
         {
             navMeshAgent.SetDestination(basePosition);
+         
         }
 
 
