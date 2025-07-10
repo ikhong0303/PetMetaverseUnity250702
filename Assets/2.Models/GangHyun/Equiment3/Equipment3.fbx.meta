@@ -8,27 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Equipment
-    second: {fileID: 2100000, guid: 5fe44a37e96e5ac4893e1c509cd9baf8, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Equipment_Base_color
-    second: {fileID: 2800000, guid: 55cf77dd0f1024641b4d8ae70a0af2f8, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Equipment_Metallic
-    second: {fileID: 2800000, guid: 16ee92ad4f280cf4a87c9c72f5c8e9ab, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Equipment_Normal_OpenGL
-    second: {fileID: 2800000, guid: 2e6ef8760e5519b42b97d5e9ea8c8421, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Equipment_Roughness
-    second: {fileID: 2800000, guid: 8cc478f67b09d11419f477272e655c7f, type: 3}
+    second: {fileID: 2100000, guid: d3f567366fea2e640a645273d428fecf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
