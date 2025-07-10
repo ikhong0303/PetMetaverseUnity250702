@@ -38,6 +38,7 @@ public class Ball : MonoBehaviour
         }
     }
 
+    [ContextMenu("CatchBall")]
     public void CatchBall()
     {
         canBite = true;
