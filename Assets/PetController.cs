@@ -31,18 +31,18 @@ public class PetController : MonoBehaviour
     private void Awake()
     {
         mouseBall = transform.GetComponentInChildren<BallFinder>().gameObject;
-        
-
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
         navMeshAgent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         ball = GameObject.FindGameObjectWithTag("Ball");
         basePosition = this.transform.position;
         mouseBall.SetActive(false);
+
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+
     }
 
 
@@ -50,7 +50,7 @@ public class PetController : MonoBehaviour
     {
         if (state == PetState.play) return; //플레이중엔 무시. 플레이를 끝내면 다시 WAIT모드로 바꾸는 버튼ui라던가 필요?
         playerDistance = Vector3.Distance(transform.position, player.transform.position);
-        if (playerDistance < searchRadius) //플레이어가 일정거리 이상 가까워지면 추적모드로
+        if (playerDistance < searchRadius || mouseBall.activeInHierarchy) //플레이어가 일정거리 이상 가까워지면 추적모드로
         {
             state = PetState.chase;
         }
@@ -61,16 +61,13 @@ public class PetController : MonoBehaviour
 
         if(playerDistance < 2 && mouseBall.activeInHierarchy && !ball.activeInHierarchy)
         {
+            ball.transform.position = mouseBall.transform.position;
             mouseBall.SetActive(false);
 
             ball.SetActive(true);
-            ball.transform.position = Camera.main.transform.position + new Vector3(Random.Range(0.5f,2),1, Random.Range(0.5f,2));
-            Rigidbody rb = ball.GetComponent<Rigidbody>();
-      
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
+                            
+            
 
-            print("ball"); 
         }
         
         
@@ -86,7 +83,7 @@ public class PetController : MonoBehaviour
             navMeshAgent.SetDestination(ball.transform.position);
         }
 
-        else if (state == PetState.chase || mouseBall.activeInHierarchy) //추적일때 플레이어 추적
+        else if (state == PetState.chase ) //추적일때 플레이어 추적
         {
             navMeshAgent.SetDestination(player.transform.position);
             if(playerDistance < 2)
@@ -117,7 +114,7 @@ public class PetController : MonoBehaviour
 
     }
 
-    /*
+    /* 
     void Delay()
     {
         if (timer > 0)

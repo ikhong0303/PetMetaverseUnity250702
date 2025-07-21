@@ -10,7 +10,7 @@ public class DoorTrigger : MonoBehaviour
     [SerializeField] Transform leftDoor;
     [SerializeField] float spd = 4;
     Vector3 rpos, lpos;
-    [SerializeField]bool isOpen = false;
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
